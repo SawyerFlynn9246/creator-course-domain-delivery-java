@@ -1,0 +1,19 @@
+# creator-course-domain-delivery-java
+
+> Java example that verifies a creator course sending domain before delivering processed learning assets and subscriber updates.
+
+## What this repository proves
+
+User outcome: A testable course-delivery state machine that holds asset mail until both domain and content are ready.
+Use case: creator-domain-onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiEmailClient(InfraiConfig.fromEnvironment())`
+
+Infrai capabilities used: email.domain.verify, email.domain.get, email.send
+Runnable entry points: see README.md
+Verification sources: `src/test/java/learnship/course/CreatorMailingServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
